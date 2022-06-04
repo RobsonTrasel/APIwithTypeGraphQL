@@ -4,6 +4,9 @@
   "main": "index.js",
   "author": "Robson Fernando Trasel de Souza <95061628+RobsonTrasel@users.noreply.github.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "ts-node-dev src/server.ts"
+  },
   "devDependencies": {
     "@types/node": "^17.0.39",
     "ts-node-dev": "^2.0.0",

@@ -1,7 +1,14 @@
+import 'reflect-metadata'
 import { ApolloServer } from 'apollo-server'
+import { buildSchema } from 'type-graphql'
+import { VideoResolver } from './video/videoResolver'
 
 async function bootstrap() {
-    const server = new ApolloServer({})
+    const schema = await buildSchema({
+        resolvers: [VideoResolver]
+    })
+    const server = new ApolloServer({ schema })
+
     server.listen({ port: 4000 }, console.log(`Server is running`))
 
 }
